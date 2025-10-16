@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard de Pagos - Tranred</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="logo-tranred.png" alt="Tranred" class="logo"/>
+    </div>
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Resumen -->
+    <section class="card">
+      <h2>Resumen General</h2>
+      <div class="kpis">
+        <div class="kpi">
+          <span class="kpi-label">Transacciones hoy</span>
+          <span class="kpi-value">1.245</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Monto total</span>
+          <span class="kpi-value">$95.300</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Aprobación</span>
+          <span class="kpi-value">92%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clientes -->
+    <section class="card">
+      <h2>Clientes principales</h2>
+
+      <div class="cliente">
+        <div class="cliente-info">
+          <h3>Empresas Polar</h3>
+          <p><strong>Transacciones:</strong> 320 · <strong>Monto:</strong> $25.000</p>
+        </div>
+        <div id="chart-polar" class="chart"></div>
+      </div>
+
+      <div class="cliente">
+        <div class="cliente-info">
+          <h3>Digitel50</h3>
+          <p><strong>Transacciones:</strong> 280 · <strong>Monto:</strong> $20.000</p>
+        </div>
+        <div id="chart-digitel" class="chart"></div>
+      </div>
+
+      <div class="cliente">
+        <div class="cliente-info">
+          <h3>Telefónica</h3>
+          <p><strong>Transacciones:</strong> 400 · <strong>Monto:</strong> $30.000</p>
+        </div>
+        <div id="chart-telefonica" class="chart"></div>
+      </div>
+
+      <div class="cliente">
+        <div class="cliente-info">
+          <h3>Bancaribe</h3>
+          <p><strong>Transacciones:</strong> 245 · <strong>Monto:</strong> $20.300</p>
+        </div>
+        <div id="chart-bancaribe" class="chart"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Tranred — Demo</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
